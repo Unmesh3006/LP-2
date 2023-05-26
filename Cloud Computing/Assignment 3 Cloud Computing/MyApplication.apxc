@@ -1,0 +1,15 @@
+public class MyApplication {
+    public static void executeApplication() {
+        Customer acc = new Customer('Rohit', 'Patil', 'rohitvpatil0810@gmail.com');
+        
+        Customer acc1 = new Customer('Jayesh', 'Patil', 'jayeshspatil1602@gmail.com');
+    
+        List<Customer> customers = new List<Customer>();
+        customers.add(acc);
+        customers.add(acc1);
+
+        for (Customer customer : customers) {
+            customer.displayCustomerDetails();
+        }
+    }
+}

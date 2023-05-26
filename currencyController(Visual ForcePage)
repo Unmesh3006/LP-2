@@ -1,0 +1,28 @@
+<apex:page controller="currencyController">
+    <apex:form >
+        <apex:pageBlock >
+    		<apex:pageBlockSection >
+                    <apex:outputLabel value="Currency1"/>
+					<apex:selectRadio value="{!currency1}">
+                    	<apex:selectOption itemValue="Rupee" itemLabel="₹"></apex:selectOption>
+                        <apex:selectOption itemValue="Dollar" itemLabel="$"></apex:selectOption>
+                        <apex:selectOption itemValue="Pound" itemLabel="£"></apex:selectOption>
+                    </apex:selectRadio>
+                    <apex:outputLabel value="Value1"></apex:outputLabel>
+                    <apex:inputText value="{!value1}"/>
+                    <apex:outputLabel value="Currency2"/>
+                    <apex:selectRadio value="{!currency2}">
+                    	<apex:selectOption itemValue="Rupee" itemLabel="₹"></apex:selectOption>
+                        <apex:selectOption itemValue="Dollar" itemLabel="$"></apex:selectOption>
+                        <apex:selectOption itemValue="Pound" itemLabel="£"></apex:selectOption>
+                    </apex:selectRadio>
+                    <apex:outputLabel value="Result: "/>
+                    <apex:outputText value="{!value2}" id="res"/>
+                    <apex:actionStatus id="sts" startText="Finding..."/>
+        	</apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+            	<apex:commandButton value="Convert" action="{!convert}" reRender="res" status="sts"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,87 @@
+public class ScientificCalc {
+    public double value1 {get;set;}
+    public double value2 {get;set;}
+    public double result {get;set;}
+    
+    public string err {get;set;}
+    
+    public void Add() {
+        result = value1 + value2;
+         err = '';
+    }
+    
+    public void Sub() {
+        result = value1 - value2;
+        err = '';
+    }
+    
+    public void Mult() {
+        result = value1 * value2;
+        err = '';
+    }
+    
+    public void Div() {
+        try {
+        	result = value1 / value2;
+            err = '';
+        } catch (Exception e) {
+            result = 999999;
+            err = 'Err: Cannot divide by zero';
+        }
+    }
+    
+    public void Sq() {
+        result = value1 * value1;
+        err = '';
+    }
+    
+    public void Sqrt() {
+        if (value1 <= 0) {
+            result = 0;
+            err = 'Sqrt value input cannot be negative';
+        } else {
+        	result = Math.sqrt(value1);
+        	err = '';
+        }
+    }
+    
+    public void Abs() {
+        if (value1 > value2) {
+            result = value1 - value2;
+        }
+        else {
+            result = value2 - value1;
+        }
+        err = '';
+    }
+    
+    public void Log10() {
+        if (value1 <= 0) {
+            result = 0;
+            err = 'Log value input cannot be negative';
+        } else {
+        	result = Math.log10(value1);
+        	err = '';
+        }
+    }
+    
+    public void Log2() {
+        if (value1 <= 0) {
+            result = 0;
+            err = 'Log value input cannot be negative';
+        } else {
+        	result = Math.log(value1);
+        	err = '';
+        }
+    }
+    
+    public void Mini() {
+        result = Math.min(value1, value2);
+        err = '';
+    }
+    
+    public void Maxi () {
+        result = Math.max(value1, value2); 
+        err = '';
+    }
+}

@@ -1,0 +1,30 @@
+<apex:page docType="html-5.0" controller="ScientificCalc">
+    <apex:form title="Scientific Calculator" >
+    	<apex:pageBlock >
+        	<apex:pageBlockSection >
+            	<apex:outputLabel > Value 1 </apex:outputLabel>
+                <apex:input type="number" value="{!value1}" />
+                <apex:outputLabel > Value 2 </apex:outputLabel>
+                <apex:input type="number" value="{!value2}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+            	<apex:commandButton action="{!Add}" value="Addition"/>
+            	<apex:commandButton action="{!Sub}" value="Subtraction"/>
+            	<apex:commandButton action="{!Mult}" value="Multiplication"/>
+            	<apex:commandButton action="{!Div}" value="Division"/>
+                <apex:commandButton action="{!Sq}" value="Square"/>
+                <apex:commandButton action="{!Sqrt}" value="Square root"/>
+                <apex:commandButton action="{!Abs}" value="Absolute"/>
+                <apex:commandButton action="{!Log10}" value="Log10"/>
+                <apex:commandButton action="{!Log2}" value="Loge"/>
+                <apex:commandButton action="{!Mini}" value="Minimum"/>
+                <apex:commandButton action="{!Maxi}" value="Maximum"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+            	<apex:outputLabel > Result </apex:outputLabel>
+                <apex:outputLabel value="{!result}"/>
+                <apex:outputLabel value="{!err}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
